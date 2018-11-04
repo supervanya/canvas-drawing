@@ -27,7 +27,7 @@ var myGameArea = {
         this.canvas.style.cursor = "none"; //hide the original cursor
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.interval = setInterval(updateGameArea, 20);
+        this.interval = setInterval(updateGameArea, 0.01);
         window.addEventListener('mousemove', function (e) {
             myGameArea.x = e.pageX;
             myGameArea.y = e.pageY;
@@ -82,9 +82,11 @@ function updateGameArea() {
     myGamePiece.update();
 }
 </script>
-<p>Move the cursor inside the canvas to move the square.</p>
-<p>Press up or down keys to change the pen size.</p>
-<p>Press R,G,B,Y to change the colors.</p>
-<p>Press spacebar to clear the canvas.</p>
+<ul>
+    <li>Move the cursor inside the canvas to move the square.</li>
+    <li>Press up or down keys to change the pen size.</li>
+    <li>Press R,G,B,Y to change the colors.</li>
+    <li>Press spacebar to clear the canvas.</li>
+</ul>
 </body>
 </html>
